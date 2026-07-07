@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>Fox Play — Premium OTT App | Movies, TV Series, Live TV & IPTV</title>
 <meta name="description" content="Fox Play APK — Watch Movies, TV Series, Live TV Servers & IPTV Channels on Android. Affordable plans from ₹39. Latest v1.0." />
 <meta property="og:title" content="Fox Play — Premium OTT App" />
@@ -10,28 +10,30 @@
 <meta property="og:image" content="https://i.ibb.co/4Z3SFQBd/download.png" />
 <link rel="icon" href="https://i.ibb.co/4Z3SFQBd/download.png" />
 <script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = { theme: { extend: { aspectRatio: { 'phone': '9 / 19.5' } } } };
-</script>
 <style>
+  html, body { overflow-x: hidden; }
   body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
   .aspect-phone { aspect-ratio: 9 / 19.5; }
+  /* Mobile phone frame sizing */
+  .phone-frame { width: min(72vw, 240px); }
+  @media (min-width: 640px) { .phone-frame { width: 240px; } }
+  @media (min-width: 1024px) { .phone-frame { width: 260px; } }
 </style>
 </head>
 <body class="min-h-screen bg-neutral-950 text-white">
 
 <!-- Nav -->
-<nav class="sticky top-0 z-40 border-b border-white/5 bg-neutral-950/80 backdrop-blur">
-  <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 sm:px-8">
-    <div class="flex items-center gap-2.5">
-      <img src="https://i.ibb.co/4Z3SFQBd/download.png" alt="Fox Play logo" class="h-10 w-10 rounded-lg object-cover" />
-      <span class="text-lg font-black tracking-tight">FOX PLAY</span>
+<nav class="sticky top-0 z-40 border-b border-white/5 bg-neutral-950/85 backdrop-blur">
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-8">
+    <div class="flex items-center gap-2 min-w-0">
+      <img src="https://i.ibb.co/4Z3SFQBd/download.png" alt="Fox Play logo" class="h-9 w-9 shrink-0 rounded-lg object-cover" />
+      <span class="truncate text-base font-black tracking-tight sm:text-lg">FOX PLAY</span>
     </div>
-    <div class="flex items-center gap-2 sm:gap-4">
+    <div class="flex items-center gap-2 sm:gap-4 shrink-0">
       <a href="#plans" class="hidden text-sm font-medium text-neutral-300 hover:text-white sm:inline">Plans</a>
       <a href="#screens" class="hidden text-sm font-medium text-neutral-300 hover:text-white sm:inline">Screens</a>
       <a href="https://www.mediafire.com/file/27d4fb5emznbrqe/Fox+Play_1.0.apk/file" target="_blank" rel="noopener"
-         class="inline-flex items-center gap-2 rounded-full bg-orange-500 px-4 py-2 text-sm font-semibold text-black hover:bg-orange-400 sm:px-5">
+         class="inline-flex items-center gap-1.5 rounded-full bg-orange-500 px-3 py-2 text-xs font-semibold text-black hover:bg-orange-400 sm:px-5 sm:text-sm">
         ⬇ <span class="hidden sm:inline">Download APK</span><span class="sm:hidden">Get App</span>
       </a>
     </div>
@@ -41,34 +43,34 @@
 <!-- Hero -->
 <header class="relative overflow-hidden">
   <div class="absolute inset-0 opacity-30" style="background: radial-gradient(600px circle at 20% 10%, #ef4444 0%, transparent 50%), radial-gradient(500px circle at 80% 60%, #f97316 0%, transparent 50%);"></div>
-  <div class="relative mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20 lg:py-28">
-    <div class="grid items-center gap-12 lg:grid-cols-2">
-      <div>
-        <div class="mb-5 inline-flex items-center gap-2 rounded-full border border-orange-500/40 bg-orange-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-orange-300">
+  <div class="relative mx-auto max-w-7xl px-4 py-10 sm:px-8 sm:py-20 lg:py-28">
+    <div class="grid items-center gap-10 lg:grid-cols-2 lg:gap-12">
+      <div class="text-center lg:text-left">
+        <div class="mb-4 inline-flex items-center gap-2 rounded-full border border-orange-500/40 bg-orange-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-orange-300 sm:text-xs">
           ⚡ Latest Version 1.0
         </div>
-        <div class="mb-6 flex items-center gap-4">
-          <img src="https://i.ibb.co/4Z3SFQBd/download.png" alt="Fox Play" class="h-16 w-16 rounded-2xl shadow-lg shadow-orange-500/30 sm:h-20 sm:w-20" />
-          <div>
-            <div class="text-xs uppercase tracking-widest text-neutral-400">Premium OTT</div>
-            <div class="text-2xl font-black sm:text-3xl">FOX PLAY</div>
+        <div class="mb-5 flex items-center justify-center gap-3 sm:gap-4 lg:justify-start">
+          <img src="https://i.ibb.co/4Z3SFQBd/download.png" alt="Fox Play" class="h-14 w-14 shrink-0 rounded-2xl shadow-lg shadow-orange-500/30 sm:h-20 sm:w-20" />
+          <div class="min-w-0 text-left">
+            <div class="text-[10px] uppercase tracking-widest text-neutral-400 sm:text-xs">Premium OTT</div>
+            <div class="text-xl font-black sm:text-3xl">FOX PLAY</div>
           </div>
         </div>
-        <h1 class="text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+        <h1 class="text-3xl font-black leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
           Movies, Series & Live TV.
           <span class="block bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">All in one app.</span>
         </h1>
-        <p class="mt-5 max-w-lg text-base text-neutral-300 sm:text-lg">
+        <p class="mx-auto mt-4 max-w-lg text-sm text-neutral-300 sm:text-lg lg:mx-0">
           Affordable subscription plans starting at just <span class="font-bold text-orange-400">₹39</span>. Watch on up to 4 devices with premium quality.
         </p>
-        <div class="mt-8 flex flex-wrap items-center gap-4">
+        <div class="mt-7 flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-4 lg:justify-start">
           <a href="https://www.mediafire.com/file/27d4fb5emznbrqe/Fox+Play_1.0.apk/file" target="_blank" rel="noopener"
-             class="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-orange-500 to-red-600 px-7 py-4 font-bold text-white shadow-lg shadow-orange-500/30 hover:scale-105 transition">
-            ⬇ Download APK <span class="rounded-full bg-black/20 px-2 py-0.5 text-xs">v1.0</span>
+             class="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-red-600 px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-orange-500/30 hover:scale-105 transition sm:px-7 sm:py-4 sm:text-base">
+            ⬇ Download APK <span class="rounded-full bg-black/20 px-2 py-0.5 text-[10px]">v1.0</span>
           </a>
-          <a href="#plans" class="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-4 font-semibold text-white hover:bg-white/10">View Plans</a>
+          <a href="#plans" class="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-6 py-3.5 text-sm font-semibold text-white hover:bg-white/10 sm:px-6 sm:py-4 sm:text-base">View Plans</a>
         </div>
-        <div class="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-neutral-400">
+        <div class="mt-6 flex flex-wrap justify-center gap-x-5 gap-y-2 text-xs text-neutral-400 sm:text-sm lg:justify-start">
           <span>✓ From ₹39</span><span>✓ Up to 4 Devices</span><span>✓ HD Streaming</span>
         </div>
       </div>
@@ -76,9 +78,9 @@
         <div class="relative">
           <div class="absolute -inset-6 rounded-full bg-gradient-to-tr from-orange-500/20 to-red-500/20 blur-3xl"></div>
           <div class="relative flex flex-col items-center gap-4">
-            <div class="relative mx-auto w-[240px] rounded-[2.5rem] border-[10px] border-neutral-800 bg-neutral-900 shadow-2xl sm:w-[260px]">
-              <div class="absolute left-1/2 top-2 z-10 h-5 w-24 -translate-x-1/2 rounded-full bg-neutral-800"></div>
-              <div class="aspect-phone overflow-hidden rounded-[1.8rem] bg-black">
+            <div class="phone-frame relative mx-auto rounded-[2.5rem] border-[8px] border-neutral-800 bg-neutral-900 shadow-2xl sm:border-[10px]">
+              <div class="absolute left-1/2 top-2 z-10 h-4 w-20 -translate-x-1/2 rounded-full bg-neutral-800 sm:h-5 sm:w-24"></div>
+              <div class="aspect-phone overflow-hidden rounded-[1.6rem] bg-black sm:rounded-[1.8rem]">
                 <img src="https://i.ibb.co/Y7YFmRpw/image.png" alt="Home" class="block h-full w-full object-contain" />
               </div>
             </div>
@@ -92,56 +94,56 @@
 
 <!-- Features -->
 <section class="border-y border-white/5 bg-neutral-900/50">
-  <div class="mx-auto grid max-w-7xl gap-6 px-5 py-14 sm:grid-cols-3 sm:px-8">
-    <div class="rounded-2xl border border-white/5 bg-neutral-950 p-6">
+  <div class="mx-auto grid max-w-7xl gap-4 px-4 py-10 sm:grid-cols-3 sm:gap-6 sm:px-8 sm:py-14">
+    <div class="rounded-2xl border border-white/5 bg-neutral-950 p-5 sm:p-6">
       <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500/15 text-orange-400 text-lg">🎬</div>
-      <h3 class="text-lg font-bold">Massive Library</h3>
+      <h3 class="text-base font-bold sm:text-lg">Massive Library</h3>
       <p class="mt-1 text-sm text-neutral-400">Latest movies & series updated daily.</p>
     </div>
-    <div class="rounded-2xl border border-white/5 bg-neutral-950 p-6">
+    <div class="rounded-2xl border border-white/5 bg-neutral-950 p-5 sm:p-6">
       <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500/15 text-orange-400 text-lg">📡</div>
-      <h3 class="text-lg font-bold">Live TV & IPTV</h3>
+      <h3 class="text-base font-bold sm:text-lg">Live TV & IPTV</h3>
       <p class="mt-1 text-sm text-neutral-400">Thousands of channels, multiple servers.</p>
     </div>
-    <div class="rounded-2xl border border-white/5 bg-neutral-950 p-6">
+    <div class="rounded-2xl border border-white/5 bg-neutral-950 p-5 sm:p-6">
       <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500/15 text-orange-400 text-lg">🛡️</div>
-      <h3 class="text-lg font-bold">Multi-Device</h3>
+      <h3 class="text-base font-bold sm:text-lg">Multi-Device</h3>
       <p class="mt-1 text-sm text-neutral-400">Watch on up to 4 devices with one plan.</p>
     </div>
   </div>
 </section>
 
 <!-- Screenshots -->
-<section id="screens" class="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-24">
+<section id="screens" class="mx-auto max-w-7xl px-4 py-12 sm:px-8 sm:py-24">
   <div class="mx-auto max-w-2xl text-center">
-    <h2 class="text-3xl font-black tracking-tight sm:text-4xl">Take a Look Inside</h2>
-    <p class="mt-3 text-neutral-400">Every screen designed for a smooth streaming experience.</p>
+    <h2 class="text-2xl font-black tracking-tight sm:text-4xl">Take a Look Inside</h2>
+    <p class="mt-3 text-sm text-neutral-400 sm:text-base">Every screen designed for a smooth streaming experience.</p>
   </div>
-  <div id="shots-grid" class="mt-14 grid gap-x-6 gap-y-14 sm:grid-cols-2 lg:grid-cols-3"></div>
+  <div id="shots-grid" class="mt-10 grid grid-cols-2 gap-x-4 gap-y-10 sm:mt-14 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-14 lg:grid-cols-3"></div>
 </section>
 
 <!-- Plans -->
 <section id="plans" class="border-t border-white/5 bg-neutral-900/40">
-  <div class="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-24">
+  <div class="mx-auto max-w-7xl px-4 py-12 sm:px-8 sm:py-24">
     <div class="mx-auto max-w-2xl text-center">
-      <div class="mb-3 inline-flex items-center gap-2 rounded-full border border-orange-500/40 bg-orange-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-orange-300">Subscription Plans</div>
-      <h2 class="text-3xl font-black tracking-tight sm:text-4xl">Pick a plan that fits you</h2>
-      <p class="mt-3 text-neutral-400">Choose your device count, then your duration. Longer plans save more.</p>
+      <div class="mb-3 inline-flex items-center gap-2 rounded-full border border-orange-500/40 bg-orange-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-orange-300 sm:text-xs">Subscription Plans</div>
+      <h2 class="text-2xl font-black tracking-tight sm:text-4xl">Pick a plan that fits you</h2>
+      <p class="mt-3 text-sm text-neutral-400 sm:text-base">Choose your device count, then your duration. Longer plans save more.</p>
     </div>
-    <div id="plans-grid" class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4"></div>
+    <div id="plans-grid" class="mt-10 grid gap-5 sm:mt-12 sm:gap-6 sm:grid-cols-2 xl:grid-cols-4"></div>
     <p class="mt-8 text-center text-xs text-neutral-500">Prices in INR. Subscribe inside the app after installation.</p>
   </div>
 </section>
 
 <!-- Coupon -->
 <section class="border-t border-white/5 bg-gradient-to-b from-neutral-950 to-neutral-900/50">
-  <div class="mx-auto max-w-4xl px-5 py-16 text-center sm:px-8 sm:py-24">
-    <div class="mb-4 inline-flex items-center gap-2 rounded-full border border-blue-400/40 bg-blue-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-blue-300">💬 Premium Coupon Available</div>
-    <h2 class="text-3xl font-black tracking-tight sm:text-4xl">Get Your Premium Coupon on Telegram</h2>
-    <p class="mx-auto mt-4 max-w-xl text-neutral-300">Join our Telegram bot to claim your premium coupon and unlock the full Fox Play experience instantly.</p>
-    <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-      <a href="https://t.me/yashraj4bot" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full bg-[#229ED9] px-7 py-4 font-bold text-white shadow-lg hover:scale-105 transition">✈ Get Coupon on @yashraj4bot</a>
-      <a href="https://t.me/techyashraj" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-4 font-semibold text-white hover:bg-white/10">💬 Join Telegram Channel</a>
+  <div class="mx-auto max-w-4xl px-4 py-12 text-center sm:px-8 sm:py-24">
+    <div class="mb-4 inline-flex items-center gap-2 rounded-full border border-blue-400/40 bg-blue-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-blue-300 sm:text-xs">💬 Premium Coupon Available</div>
+    <h2 class="text-2xl font-black tracking-tight sm:text-4xl">Get Your Premium Coupon on Telegram</h2>
+    <p class="mx-auto mt-4 max-w-xl text-sm text-neutral-300 sm:text-base">Join our Telegram bot to claim your premium coupon and unlock the full Fox Play experience instantly.</p>
+    <div class="mt-7 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center sm:gap-4">
+      <a href="https://t.me/yashraj4bot" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 rounded-full bg-[#229ED9] px-6 py-3.5 text-sm font-bold text-white shadow-lg hover:scale-105 transition sm:px-7 sm:py-4 sm:text-base">✈ Get Coupon on @yashraj4bot</a>
+      <a href="https://t.me/techyashraj" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-6 py-3.5 text-sm font-semibold text-white hover:bg-white/10 sm:py-4 sm:text-base">💬 Join Telegram Channel</a>
     </div>
   </div>
 </section>
@@ -149,24 +151,24 @@
 <!-- Download CTA -->
 <section class="relative overflow-hidden border-t border-white/5">
   <div class="absolute inset-0 opacity-40" style="background: radial-gradient(500px circle at 50% 50%, #f97316 0%, transparent 60%);"></div>
-  <div class="relative mx-auto max-w-4xl px-5 py-20 text-center sm:px-8">
-    <img src="https://i.ibb.co/4Z3SFQBd/download.png" alt="Fox Play" class="mx-auto mb-6 h-20 w-20 rounded-2xl shadow-lg shadow-orange-500/40" />
-    <h2 class="text-3xl font-black sm:text-5xl">Ready to Stream?</h2>
-    <p class="mx-auto mt-4 max-w-xl text-neutral-300">Download Fox Play v1.0 for Android and choose a plan starting at just ₹39.</p>
+  <div class="relative mx-auto max-w-4xl px-4 py-14 text-center sm:px-8 sm:py-20">
+    <img src="https://i.ibb.co/4Z3SFQBd/download.png" alt="Fox Play" class="mx-auto mb-5 h-16 w-16 rounded-2xl shadow-lg shadow-orange-500/40 sm:h-20 sm:w-20" />
+    <h2 class="text-2xl font-black sm:text-5xl">Ready to Stream?</h2>
+    <p class="mx-auto mt-3 max-w-xl text-sm text-neutral-300 sm:text-base">Download Fox Play v1.0 for Android and choose a plan starting at just ₹39.</p>
     <a href="https://www.mediafire.com/file/27d4fb5emznbrqe/Fox+Play_1.0.apk/file" target="_blank" rel="noopener"
-       class="mt-8 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-lg font-bold text-black hover:scale-105 transition">⬇ Download APK — v1.0</a>
+       class="mt-6 inline-flex w-full max-w-sm items-center justify-center gap-2 rounded-full bg-white px-6 py-4 text-base font-bold text-black hover:scale-105 transition sm:mt-8 sm:w-auto sm:px-8 sm:text-lg">⬇ Download APK — v1.0</a>
     <div class="mt-6 text-sm text-neutral-400">⭐⭐⭐⭐⭐ Loved by users</div>
   </div>
 </section>
 
 <footer class="border-t border-white/5 bg-neutral-950 py-8 text-center text-sm text-neutral-500">
-  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+  <div class="mx-auto max-w-7xl px-4 sm:px-8">
     <p class="font-semibold text-white">Created by Yashraj IPTV Developer — Yashraj Tomar</p>
-    <div class="mt-3 flex flex-wrap items-center justify-center gap-4">
+    <div class="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
       <a href="https://t.me/yashraj4bot" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300">@yashraj4bot (Coupons)</a>
       <a href="https://t.me/techyashraj" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300">@techyashraj (Channel)</a>
     </div>
-    <p class="mt-4">© 2026 Fox Play. All rights reserved.</p>
+    <p class="mt-4 text-xs">© 2026 Fox Play. All rights reserved.</p>
   </div>
 </footer>
 
@@ -180,14 +182,14 @@
     { label: "My Account", src: "https://i.ibb.co/n88hBtqQ/image.png" },
   ];
   document.getElementById('shots-grid').innerHTML = SHOTS.map(s => `
-    <div class="flex flex-col items-center gap-4">
-      <div class="relative mx-auto w-[240px] rounded-[2.5rem] border-[10px] border-neutral-800 bg-neutral-900 shadow-2xl sm:w-[260px]">
-        <div class="absolute left-1/2 top-2 z-10 h-5 w-24 -translate-x-1/2 rounded-full bg-neutral-800"></div>
-        <div class="aspect-phone overflow-hidden rounded-[1.8rem] bg-black">
+    <div class="flex flex-col items-center gap-3 sm:gap-4">
+      <div class="phone-frame relative mx-auto rounded-[2rem] border-[6px] border-neutral-800 bg-neutral-900 shadow-2xl sm:rounded-[2.5rem] sm:border-[10px]">
+        <div class="absolute left-1/2 top-1.5 z-10 h-3 w-16 -translate-x-1/2 rounded-full bg-neutral-800 sm:top-2 sm:h-5 sm:w-24"></div>
+        <div class="aspect-phone overflow-hidden rounded-[1.4rem] bg-black sm:rounded-[1.8rem]">
           <img src="${s.src}" alt="${s.label}" loading="lazy" class="block h-full w-full object-contain" />
         </div>
       </div>
-      <span class="font-semibold uppercase tracking-widest text-xs text-orange-400">${s.label}</span>
+      <span class="font-semibold uppercase tracking-widest text-[10px] text-orange-400 sm:text-xs">${s.label}</span>
     </div>`).join('');
 
   const APK = "https://www.mediafire.com/file/27d4fb5emznbrqe/Fox+Play_1.0.apk/file";
@@ -198,19 +200,19 @@
     { tier: "4 Devices", badge: "+30%", highlight: false, prices: [["7 Days",51],["1 Month",142],["3 Months",389],["6 Months",649],["1 Year",1299]] },
   ];
   document.getElementById('plans-grid').innerHTML = PLANS.map(p => `
-    <div class="relative flex flex-col rounded-2xl border p-6 ${p.highlight ? 'border-orange-500/60 bg-gradient-to-b from-orange-500/10 to-neutral-950 shadow-xl shadow-orange-500/10' : 'border-white/10 bg-neutral-950'}">
+    <div class="relative flex flex-col rounded-2xl border p-5 sm:p-6 ${p.highlight ? 'border-orange-500/60 bg-gradient-to-b from-orange-500/10 to-neutral-950 shadow-xl shadow-orange-500/10' : 'border-white/10 bg-neutral-950'}">
       ${p.highlight ? '<div class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-orange-500 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-black">Most Popular</div>' : ''}
       <div class="flex items-baseline justify-between">
-        <h3 class="text-xl font-black">${p.tier}</h3>
-        <span class="rounded-full px-2 py-0.5 text-xs font-semibold ${p.badge==='Base'?'bg-white/10 text-neutral-300':'bg-orange-500/20 text-orange-300'}">${p.badge}</span>
+        <h3 class="text-lg font-black sm:text-xl">${p.tier}</h3>
+        <span class="rounded-full px-2 py-0.5 text-[11px] font-semibold sm:text-xs ${p.badge==='Base'?'bg-white/10 text-neutral-300':'bg-orange-500/20 text-orange-300'}">${p.badge}</span>
       </div>
       <div class="mt-4 flex items-baseline gap-1">
-        <span class="text-4xl font-black">₹${p.prices[0][1]}</span><span class="text-sm text-neutral-400">/ 7 days</span>
+        <span class="text-3xl font-black sm:text-4xl">₹${p.prices[0][1]}</span><span class="text-sm text-neutral-400">/ 7 days</span>
       </div>
-      <ul class="mt-6 space-y-3 border-t border-white/5 pt-5">
+      <ul class="mt-5 space-y-2.5 border-t border-white/5 pt-4 sm:mt-6 sm:space-y-3 sm:pt-5">
         ${p.prices.map(x => `<li class="flex items-center justify-between text-sm"><span class="text-neutral-300">${x[0]} Plan</span><span class="font-bold text-white">₹${x[1]}</span></li>`).join('')}
       </ul>
-      <a href="${APK}" target="_blank" rel="noopener" class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-bold ${p.highlight?'bg-orange-500 text-black hover:bg-orange-400':'border border-white/20 text-white hover:bg-white/10'}">⬇ Download & Subscribe</a>
+      <a href="${APK}" target="_blank" rel="noopener" class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-bold sm:mt-6 ${p.highlight?'bg-orange-500 text-black hover:bg-orange-400':'border border-white/20 text-white hover:bg-white/10'}">⬇ Download & Subscribe</a>
     </div>`).join('');
 </script>
 </body>
