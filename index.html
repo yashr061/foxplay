@@ -14,9 +14,11 @@
   html, body { overflow-x: hidden; }
   body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
   .aspect-phone { aspect-ratio: 9 / 19.5; }
-  /* Mobile phone frame sizing */
-  .phone-frame { width: min(72vw, 240px); }
-  @media (min-width: 640px) { .phone-frame { width: 240px; } }
+  /* Hero phone (single, centered) */
+  .phone-frame { width: min(70vw, 240px); }
+  /* Screenshots grid: 2-up on mobile, fits within column */
+  .phone-frame-grid { width: 100%; max-width: 240px; }
+  @media (min-width: 640px) { .phone-frame { width: 240px; } .phone-frame-grid { max-width: 240px; } }
   @media (min-width: 1024px) { .phone-frame { width: 260px; } }
 </style>
 </head>
@@ -183,9 +185,9 @@
   ];
   document.getElementById('shots-grid').innerHTML = SHOTS.map(s => `
     <div class="flex flex-col items-center gap-3 sm:gap-4">
-      <div class="phone-frame relative mx-auto rounded-[2rem] border-[6px] border-neutral-800 bg-neutral-900 shadow-2xl sm:rounded-[2.5rem] sm:border-[10px]">
-        <div class="absolute left-1/2 top-1.5 z-10 h-3 w-16 -translate-x-1/2 rounded-full bg-neutral-800 sm:top-2 sm:h-5 sm:w-24"></div>
-        <div class="aspect-phone overflow-hidden rounded-[1.4rem] bg-black sm:rounded-[1.8rem]">
+      <div class="phone-frame-grid relative mx-auto rounded-[1.5rem] border-[5px] border-neutral-800 bg-neutral-900 shadow-2xl sm:rounded-[2.5rem] sm:border-[10px]">
+        <div class="absolute left-1/2 top-1 z-10 h-2.5 w-12 -translate-x-1/2 rounded-full bg-neutral-800 sm:top-2 sm:h-5 sm:w-24"></div>
+        <div class="aspect-phone overflow-hidden rounded-[1.1rem] bg-black sm:rounded-[1.8rem]">
           <img src="${s.src}" alt="${s.label}" loading="lazy" class="block h-full w-full object-contain" />
         </div>
       </div>
