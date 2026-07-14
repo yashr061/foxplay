@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -133,6 +134,21 @@
       <p class="mt-3 text-sm text-neutral-400 sm:text-base">Choose your device count, then your duration. Longer plans save more.</p>
     </div>
     <div id="plans-grid" class="mt-10 grid gap-5 sm:mt-12 sm:gap-6 sm:grid-cols-2 xl:grid-cols-4"></div>
+
+    <!-- Full Pricing Table -->
+    <div class="mt-12 overflow-hidden rounded-2xl border border-white/10 bg-neutral-950 sm:mt-16">
+      <div class="overflow-x-auto">
+        <table id="pricing-table" class="w-full min-w-[800px] text-sm">
+          <thead>
+            <tr class="border-b border-white/10">
+              <th class="sticky left-0 z-10 bg-neutral-950 px-4 py-4 text-left text-xs font-bold text-blue-400 sm:px-6">PLAN \ DEVICES</th>
+            </tr>
+          </thead>
+          <tbody id="pricing-table-body"></tbody>
+        </table>
+      </div>
+    </div>
+
     <p class="mt-8 text-center text-xs text-neutral-500">Prices in INR. Subscribe inside the app after installation.</p>
   </div>
 </section>
@@ -216,6 +232,42 @@
       </ul>
       <a href="${APK}" target="_blank" rel="noopener" class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-bold sm:mt-6 ${p.highlight?'bg-orange-500 text-black hover:bg-orange-400':'border border-white/20 text-white hover:bg-white/10'}">⬇ Download & Subscribe</a>
     </div>`).join('');
+
+  // Full 1-10 device pricing matrix
+  const PRICING_TABLE = {
+    headers: [
+      { label: "1 DEV", sub: "BASE" },
+      { label: "2 DEV", sub: "+10%" },
+      { label: "3 DEV", sub: "+20%" },
+      { label: "4 DEV", sub: "+30%" },
+      { label: "5 DEV", sub: "+40%" },
+      { label: "6 DEV", sub: "+50%" },
+      { label: "7 DEV", sub: "+60%" },
+      { label: "8 DEV", sub: "+70%" },
+      { label: "9 DEV", sub: "+80%" },
+      { label: "10 DEV", sub: "+90%" },
+    ],
+    rows: [
+      { name: "7 Days", prices: [39, 43, 47, 51, 55, 59, 62, 66, 70, 74] },
+      { name: "1 Month", prices: [109, 120, 131, 142, 153, 164, 174, 185, 196, 207] },
+      { name: "3 Months", prices: [299, 329, 359, 389, 419, 449, 478, 508, 538, 568] },
+      { name: "6 Months", prices: [499, 549, 599, 649, 699, 749, 798, 848, 898, 948] },
+      { name: "1 Year", prices: [999, 1099, 1199, 1299, 1399, 1499, 1598, 1698, 1798, 1898] },
+    ],
+  };
+
+  const theadRow = document.querySelector('#pricing-table thead tr');
+  theadRow.innerHTML += PRICING_TABLE.headers.map(h => `
+    <th class="px-3 py-4 text-center text-xs font-bold text-blue-400 sm:px-4">
+      <div>${h.label}</div>
+      <div class="mt-0.5 text-[10px] font-medium text-blue-300/80">${h.sub}</div>
+    </th>`).join('');
+
+  document.getElementById('pricing-table-body').innerHTML = PRICING_TABLE.rows.map((row, idx) => `
+    <tr class="${idx % 2 === 1 ? 'bg-white/[0.02]' : ''}">
+      <td class="sticky left-0 z-10 bg-neutral-950 px-4 py-4 font-semibold text-white sm:px-6">${row.name}</td>
+      ${row.prices.map(p => `<td class="px-3 py-4 text-center font-semibold text-emerald-400 sm:px-4">₹${p}</td>`).join('')}
+    </tr>`).join('');
 </script>
 </body>
 </html>
